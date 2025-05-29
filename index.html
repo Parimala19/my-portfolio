@@ -1,246 +1,242 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Parimala Tejaswi - Portfolio</title>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
-<style>
-  body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    background-color: #f9f9f9;
-  }
-  header {
-    background-color: #6a0dad; /* Purple shade */
-    color: #fff;
-    padding: 1rem;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-  }
-  header h1 {
-    margin: 0;
-    font-size: 1.5rem;
-  }
-  .contact-info {
-    font-size: 0.85rem;
-    margin-top: 5px;
-    display: flex;
-    gap: 15px;
-    align-items: center;
-  }
-  .contact-info i {
-    margin-right: 5px;
-  }
-  nav {
-    margin-top: 10px;
-  }
-  nav a {
-    margin: 0 1rem 0 0;
-    text-decoration: none;
-    color: white;
-    font-weight: bold;
-    transition: all 0.3s;
-  }
-  nav a:hover {
-    text-decoration: underline;
-    font-style: italic;
-    color: #ffd700;
-  }
-  section {
-    padding: 2rem;
-  }
-  .profile-img {
-    border-radius: 50%;
-    width: 120px;
-    height: 120px;
-  }
-  .skills img {
-    width: 50px;
-    vertical-align: middle;
-    margin-right: 10px;
-  }
-  .skills p {
-    font-size: 1.2rem;
-  }
-  .project, .recommendation {
-    background: #fff;
-    padding: 1rem;
-    margin-bottom: 1rem;
-    border-left: 5px solid #6a0dad;
-  }
-  .home-icon {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    font-size: 2rem;
-    color: #6a0dad;
-    cursor: pointer;
-  }
-  #recommendations textarea {
-    width: 100%;
-    max-width: 500px;
-    margin-bottom: 10px;
-    font-size: 1rem;
-    padding: 8px;
-  }
-  #recommendations button {
-    background-color: #6a0dad;
-    color: white;
-    border: none;
-    padding: 10px 15px;
-    cursor: pointer;
-    font-size: 1rem;
-  }
-  #recommendations button:hover {
-    background-color: #530a9e;
-  }
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Parimala Tejaswi Portfolio</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        background-color: #f9f9f9;
+      }
+      header {
+        background-color: #800080; /* purple background */
+        color: white;
+        padding: 1rem;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      header h1 {
+        margin: 0;
+        font-size: 1.8rem;
+        font-weight: bold;
+      }
+      header .contact-info {
+        margin-top: 5px;
+        font-size: 0.9rem;
+        color: #e0c6e0;
+        display: flex;
+        gap: 20px;
+        align-items: center;
+      }
+      header .contact-info i {
+        margin-right: 5px;
+      }
+      nav {
+        margin-top: 10px;
+      }
+      nav a {
+        margin-right: 15px;
+        text-decoration: none;
+        color: white;
+        font-weight: bold;
+        transition: all 0.3s;
+      }
+      nav a:hover {
+        text-decoration: underline;
+        font-style: italic;
+        color: #ffd700;
+      }
+      #notice {
+        background-color: #ffebeb;
+        color: #a00;
+        padding: 10px;
+        text-align: center;
+        font-weight: bold;
+      }
+      section {
+        padding: 2rem;
+      }
+      .profile-img {
+        border-radius: 50%;
+        width: 120px;
+        height: 120px;
+      }
+      .skills img {
+        width: 50px;
+        vertical-align: middle;
+        margin-right: 10px;
+      }
+      .skills p {
+        font-size: 1.2rem;
+      }
+      .project,
+      .recommendation {
+        background: #fff;
+        padding: 1rem;
+        margin-bottom: 1rem;
+        border-left: 5px solid #800080;
+      }
+      #recommendations textarea {
+        width: 100%;
+        max-width: 600px;
+        margin-top: 10px;
+      }
+      #recommendations button {
+        margin-top: 10px;
+        padding: 0.5rem 1rem;
+        background-color: #800080;
+        color: white;
+        border: none;
+        cursor: pointer;
+      }
+      #recommendations button:hover {
+        background-color: #a64ca6;
+      }
+      .home-icon {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        font-size: 2rem;
+        color: #800080;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Parimala Tejaswi</h1>
+      <div class="contact-info">
+        <div><i class="fa fa-globe"></i> www.parimalatejaswi.com</div>
+        <div><i class="fa fa-phone"></i> +1-555-123-4567</div>
+      </div>
+      <nav>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#recommendations">Recommendations</a>
+      </nav>
+    </header>
 
-  /* Modal styles */
-  .modal {
-    display: none; /* Hidden by default */
-    position: fixed;
-    z-index: 1000;
-    left: 0; top: 0;
-    width: 100%; height: 100%;
-    overflow: auto;
-    background-color: rgba(0,0,0,0.4);
-  }
-  .modal-content {
-    background-color: white;
-    margin: 15% auto;
-    padding: 20px 30px;
-    border-radius: 8px;
-    width: 90%;
-    max-width: 400px;
-    text-align: center;
-    font-size: 1.2rem;
-  }
-  .modal-content button {
-    margin-top: 15px;
-    padding: 8px 20px;
-    background-color: #6a0dad;
-    border: none;
-    color: white;
-    font-size: 1rem;
-    cursor: pointer;
-    border-radius: 4px;
-  }
-  .modal-content button:hover {
-    background-color: #530a9e;
-  }
-</style>
-</head>
-<body>
-<header>
-  <h1>Parimala Tejaswi</h1>
-  <div class="contact-info">
-    <span><i class="fa fa-globe"></i> www.parimalatejaswi.dev</span>
-    <span><i class="fa fa-phone"></i> +1 (555) 123-4567</span>
-  </div>
-  <nav>
-    <a href="#about">About</a>
-    <a href="#skills">Skills</a>
-    <a href="#projects">Projects</a>
-    <a href="#recommendations">Recommendations</a>
-  </nav>
-</header>
-<section id="notice" style="background-color:#ffebeb; color:#a00; padding:10px; text-align:center; font-weight:bold;">
-    This is not my actual portfolio. It is only a project demo.
-  </section>
-<section id="about">
-  <h2>About Me</h2>
-  <img src="https://images.pexels.com/photos/1391498/pexels-photo-1391498.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="Profile" class="profile-img" />
-  <p>Hi, I'm Parimala Tejaswi, a software developer with 3 years of experience in full-stack development. I am passionate about creating interactive and efficient web applications.</p>
-</section>
+    <section id="notice">
+      This is not my actual portfolio. It is only a project demo.
+    </section>
 
-<section id="skills" class="skills">
-  <h2>Skills</h2>
-  <p><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML"/>HTML</p>
-  <p><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS"/>CSS</p>
-  <p><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript"/>JavaScript</p>
-</section>
+    <section id="about">
+      <h2>About Me</h2>
+      <img
+        src="https://images.pexels.com/photos/1391498/pexels-photo-1391498.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+        alt="Profile"
+        class="profile-img"
+      />
+      <p>
+        Hi, I'm Parimala Tejaswi, a software developer with 3 years of
+        experience in full-stack development. I am passionate about creating
+        interactive and efficient web applications.
+      </p>
+    </section>
 
-<section id="projects">
-  <h2>Projects</h2>
-  <div class="project">
-    <h3>Chrono Share</h3>
-    <p>A platform where students exchange skills through time-based sharing and collaboration.</p>
-  </div>
-  <div class="project">
-    <h3>Banking App</h3>
-    <p>A user-friendly banking application offering secure transactions and account management.</p>
-  </div>
-  <div class="project">
-    <h3>E-Cell Portal</h3>
-    <p>An entrepreneurship cell portal to connect aspiring entrepreneurs with resources and mentors.</p>
-  </div>
-</section>
+    <section id="skills" class="skills">
+      <h2>Skills</h2>
+      <p>
+        <img
+          src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg"
+          alt="HTML5 logo"
+        />
+        HTML
+      </p>
+      <p>
+        <img
+          src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg"
+          alt="CSS3 logo"
+        />
+        CSS
+      </p>
+      <p>
+        <img
+          src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"
+          alt="JavaScript logo"
+        />
+        JavaScript
+      </p>
+    </section>
 
-<section id="recommendations">
-  <h2>Recommendations</h2>
-  <div class="recommendation">John is a diligent developer who delivers on time.</div>
-  <div class="recommendation">His coding standards are excellent and easy to follow.</div>
-  <div class="recommendation">Highly recommended for front-end development roles.</div>
-  
-  <h3 style="text-align: center;">Leave a Recommendation</h3>
-  <textarea id="newRec" rows="4" placeholder="Write your recommendation here..."></textarea><br />
-  <div style="text-align: center;">
-    <button onclick="addRecommendation()">Submit</button>
-  </div>
-</section>
+    <section id="projects">
+      <h2>Projects</h2>
+      <div class="project">
+        <h3>Chrono Share</h3>
+        <p>
+          A platform where students can exchange skills and collaborate on
+          projects efficiently.
+        </p>
+      </div>
+      <div class="project">
+        <h3>Banking App</h3>
+        <p>
+          A secure and user-friendly banking application for easy money
+          management and transactions.
+        </p>
+      </div>
+      <div class="project">
+        <h3>Portfolio Builder</h3>
+        <p>
+          A dynamic portfolio generator for professionals using HTML, CSS, and
+          JavaScript.
+        </p>
+      </div>
+    </section>
 
-<a href="#" class="home-icon" title="Go to top"><i class="fa fa-home"></i></a>
+    <section id="recommendations">
+      <h2>Recommendations</h2>
+      <div class="recommendation">
+        John is a diligent developer who delivers on time.
+      </div>
+      <div class="recommendation">
+        His coding standards are excellent and easy to follow.
+      </div>
+      <div class="recommendation">
+        Highly recommended for front-end development roles.
+      </div>
 
-<!-- Modal -->
-<div id="thankYouModal" class="modal">
-  <div class="modal-content">
-    <p>Thank you for submitting!</p>
-    <button onclick="closeModal()">OK</button>
-  </div>
-</div>
+      <h3 style="text-align: center;">Leave a Recommendation</h3>
+      <textarea
+        id="newRec"
+        rows="4"
+        placeholder="Write your recommendation here..."
+      ></textarea
+      ><br />
+      <button onclick="addRecommendation()">Submit</button>
+    </section>
 
-<script>
-  function addRecommendation() {
-    const recInput = document.getElementById('newRec');
-    const rec = recInput.value.trim();
-    if (rec === "") {
-      alert("Please write something before submitting.");
-      return;
-    }
-    
-    // Create new recommendation div and insert above the textarea (before the h3 "Leave a Recommendation")
-    const newRecDiv = document.createElement('div');
-    newRecDiv.className = 'recommendation';
-    newRecDiv.textContent = rec;
+    <a href="#" class="home-icon" title="Home"><i class="fa fa-home"></i></a>
 
-    const recommendationsSection = document.getElementById('recommendations');
-    // Insert the new recommendation before the h3 (Leave a Recommendation)
-    const leaveRecHeading = recommendationsSection.querySelector('h3');
-    recommendationsSection.insertBefore(newRecDiv, leaveRecHeading);
+    <script>
+      function addRecommendation() {
+        const recInput = document.getElementById("newRec");
+        const recText = recInput.value.trim();
+        if (recText !== "") {
+          const recContainer = document.createElement("div");
+          recContainer.className = "recommendation";
+          recContainer.textContent = recText;
 
-    // Clear textarea
-    recInput.value = "";
+          // Insert the new recommendation just before the form elements
+          const recSection = document.getElementById("recommendations");
+          // Insert before the <h3> "Leave a Recommendation"
+          const formTitle = recSection.querySelector("h3");
+          recSection.insertBefore(recContainer, formTitle);
 
-    // Show modal popup
-    document.getElementById('thankYouModal').style.display = "block";
-  }
-
-  function closeModal() {
-    document.getElementById('thankYouModal').style.display = "none";
-  }
-
-  // Optional: Clicking outside the modal content closes the modal
-  window.onclick = function(event) {
-    const modal = document.getElementById('thankYouModal');
-    if (event.target === modal) {
-      modal.style.display = "none";
-    }
-  }
-
- 
-
-</script>
-</body>
+          alert("Recommendation submitted successfully!");
+          recInput.value = "";
+        } else {
+          alert("Please write something before submitting.");
+        }
+      }
+    </script>
+  </body>
 </html>
